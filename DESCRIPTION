@@ -1,0 +1,12 @@
+Package: wregpkg
+Type: Package
+Title: Functions that create regression tables easily
+Version: 0.1.0
+Author: Hyunsoo Hwang
+Maintainer: Hyunsoo Hwang <ilsanjoa@gmail.com>
+Description: The functions in the package can create a univariate and multivariable cox regression table using inverse probability of treatment weighting.
+License: GPL-3
+Imports: coin, dplyr, survival 
+Encoding: UTF-8
+LazyData: FALSE
+RoxygenNote: 7.3.1
