@@ -2,6 +2,7 @@
 
 export(multivariable.cox.ipw)
 export(na.handle.2)
+export(na.remove)
 export(rb)
 export(univariable.cox.ipw)
 import(dplyr)

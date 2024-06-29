@@ -165,4 +165,22 @@ na.handle.2 <- function(data, variable, type, useNA, na){
 }
 
 
+#' @title Transform "" levels as NA in factor
+#'
+#' @description Calculate percentages for categorical variables with frequencies
+#' @param data is a dataset
+#' @export
+#' @return A updated vector with NA value for NULL values such as "N/A"
+#' @keywords internal
+#'
 
+na.remove <- function(df){
+  for (i in 1:ncol(df)){
+    if(is.factor(df[,i])){
+      tmp <- as.character(df[,i])
+      tmp[tmp %in% c(""," ","N/A","n/a","NA","na")] <- NA
+      df[,i] <- as.factor(tmp)
+    }
+  }
+  return(df)
+}
